@@ -9,13 +9,13 @@
 <body>
 	<header>
 		<nav id="navbar" class="navbar">
-			<a href="javascript:void(0)" id="close" class="close" onclick="closeNav()">&times;</a>
+			<a href="javascript:void(0)" id="close" class="close">&times;</a>
 			<a href="index.html">Home</a>
 			<a href="#details-section">About</a>
 			<a href="#projects">Projects</a>
 			<a href="#bottom-section">Contacts</a>
 		</nav>
-		<span id="open" class="open" onclick="openNav()">&#9776;</span>
+		<span id="open" class="open">&#9776;</span>
 	</header>
 	<main id="main">
 		<section id="welcome-section">
@@ -92,18 +92,8 @@
 		</section>
 		
 	</main>
-<script>
 	
-	let openNav = () => {
-		document.getElementById("open").style.display = "none";
-		document.getElementById("navbar").style.display = "block";
-	}
-	let closeNav = () => {
-		document.getElementById("navbar").style.display = "none";
-		document.getElementById("open").style.display = "block";
-	}
-	
-</script>
+<script src="./script/main.js"></script>
 
 </body>
 </html>
