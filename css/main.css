@@ -145,6 +145,7 @@ header {
 	padding: 18px 25px;
 	border-bottom: 2px #ccc solid; 
 	width: auto;
+	text-transform: capitalize;
 }
 #details-section .detail-tile h3 {
 	font-weight: bold; 
@@ -183,30 +184,46 @@ header {
 }
 #bottom-section p a:hover {
 	background: #444;
-	padding-left: 25px;
 }
+.close {
+	display: none;
+}
+
 /*****************************
 Media queries
 ******************************/
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 700px) {
+	html, body {
+		font-size: 17px;
+	}
+	.open {
+		color: #fff;
+		font-size: 30px;
+		float: right;
+		margin: 0 0.5em 0 0;
+		display: block;
+		cursor: pointer;
+	}
+	.close {
+		text-align: left;
+	}
+
 	#welcome-section {
-		width: 100vw;
-		height: 100vh;
-		background: none;
+		width: auto;
+		background: none; background: #f4f4f4;
 	}
 	#welcome-section .welcome-container {
 		background: none;
-		width: 100vw;
-		height: 100vh;
+		width: auto;
 	}
 	#welcome-section .welcome-container h1 {
 		font-size: 35px; 
 		padding: 0; margin: 0;
-		width: 100vw;
+		width: auto;
 		color: #333;
 		text-align: center;
 		text-shadow: none;
-		border: 1px #333 solid;
 	}
 	#welcome-section .welcome-container img {
 		width: 35%;
@@ -215,30 +232,172 @@ Media queries
 	#welcome-section .welcome-container a {
 		color: #444;
 		border: #333 3px solid;
-		font-size: 36px;
+		font-size: 30px;
+	}
+	header {
+		background: #306777;
 	}
 	#navbar {
-		display: flex;
-		width: 100vw;
+		display: none;
+		width: 100vw; 
 	}
 	#navbar a {
-		font-size: 14px;
+		width: 100vw; height: 100%;
 		display: block;
+		background: rgba(0,0,0,0.5);
 	}
 
 	/*********************************
-	#navbar a [menu-icon] {
-		display: inline;
-	}
 
 	**********************************/
 	#projects {
-		display: flex;
-		flex-direction: column;
-		width: 100vw; 
-		margin: 0 auto; padding: 0;
+		display: block;
+		height: 100%;
+		width: auto; 
+		margin: 0; 
+		padding: 0;
 	}
 	#projects .project-tile {
-		width: 100vw;
+		width: auto;
 	}
+
+	#details-section {
+		display: block; 
+		height: 100%; 
+		font-size: 18px;
+		width: auto;
+		position: relative;
+	}
+	#details-section .detail-tile {
+		width: auto;
+	}
+	#details-section .detail-tile h2,
+	#details-section .detail-tile h3 {
+		text-align: center;
+	}
+
+	#bottom-section {
+		margin: 0;
+		padding: 0;
+		display: flex; 
+		height: 100vh; 
+		width: auto;
+		flex-direction: column;
+	}
+	#bottom-section p {
+		width: auto;
+		text-align: center;
+	}
+	#bottom-section .middle-line {
+		border: none;
+	}
+}
+
+@media screen and (min-width: 701px and max-width: 800px) {
+	html, body {
+		font-size: 17px;
+	}
+	.open {
+		color: #fff;
+		font-size: 30px;
+		float: right;
+		margin: 0 0.5em 0 0;
+		display: block;
+		cursor: pointer;
+	}
+	.close {
+		text-align: left;
+	}
+
+	#welcome-section {
+		width: auto;
+		background: none; background: #f4f4f4;
+	}
+	#welcome-section .welcome-container {
+		background: none;
+		width: auto;
+	}
+	#welcome-section .welcome-container h1 {
+		font-size: 35px; 
+		padding: 0; margin: 0;
+		width: auto;
+		color: #333;
+		text-align: center;
+		text-shadow: none;
+	}
+	#welcome-section .welcome-container img {
+		width: 25%;
+		border: 3px #ccc solid;
+	}
+	#welcome-section .welcome-container a {
+		color: #444;
+		border: #333 3px solid;
+		font-size: 30px;
+	}
+	header {
+		background: #306777;
+	}
+	#navbar {
+		display: none;
+		width: 100vw; 
+	}
+	#navbar a {
+		width: 100vw; height: 100%;
+		display: block;
+		background: rgba(0,0,0,0.5);
+	}
+
+	/*********************************
+
+	**********************************/
+	#projects {
+		display: block;
+		height: 100%;
+		width: auto; 
+		margin: 0; 
+		padding: 0;
+	}
+	#projects .project-tile {
+		width: auto; 
+		margin: 8px 0; 
+		border: none;
+	}
+	#projects .project-tile a {
+		width: 40%; margin: 0 auto;
+	}
+
+/*Details Section styling*/
+	#details-section {
+		display: block; 
+		margin-top: 175px;
+		height: 100vh; 
+		font-size: 18px;
+		width: auto;
+		position: relative;
+	}
+	#details-section .detail-tile {
+		width: auto;
+		margin: 8px 0;
+	}
+
+	#details-section .detail-tile h2,
+	#details-section .detail-tile h3 {
+		text-align: center;
+	}
+
+	#bottom-section {
+		margin: 0;
+		padding: 0;
+		display: flex; 
+		height: 100vh; 
+		width: auto;
+		flex-direction: column;
+	}
+	#bottom-section p {
+		width: auto;
+		text-align: center;
+	}
+	#bottom-section .middle-line {
+		border: none;
+	}	
 }
